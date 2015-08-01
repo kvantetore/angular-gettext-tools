@@ -24,6 +24,7 @@
     "test": "grunt test"
   },
   "devDependencies": {
+    "angular": "^1.4.3",
     "grunt": "~0.4.4",
     "grunt-bump": "0.0.13",
     "grunt-contrib-clean": "~0.6.0",
