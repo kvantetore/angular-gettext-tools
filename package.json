@@ -24,7 +24,6 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "angular": "^1.4.3",
     "grunt": "~0.4.4",
     "grunt-bump": "0.0.13",
     "grunt-contrib-clean": "~0.6.0",
@@ -38,6 +37,7 @@
     "gettext"
   ],
   "dependencies": {
+    "angular": "^1.4.3",
     "binary-search": "^1.2.0",
     "cheerio": "~0.19.0",
     "lodash": "^3.10.0",
