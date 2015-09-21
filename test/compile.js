@@ -242,4 +242,23 @@ describe('Compile', function () {
         vm.runInContext(output, context);
         assert(catalog.called);
     });
+    
+    it('Adds strings directly to window.localizationData', function () {
+        var files = ['test/fixtures/nl.po'];
+        var output = testCompile(files, {
+            format: "javascriptWindow"
+        });
+        
+        var window = {
+            localizationData: null
+        }
+        
+        var context = vm.createContext({
+            window: window
+        });
+        vm.runInContext(output, context);
+        assert.notEqual(window.localizationData, null);
+        assert.equal(window.localizationData['Hello!'], 'Hallo!')
+    });
+
 });
